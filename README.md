@@ -1,6 +1,6 @@
 # interactive-kit
 
-CLI for developing and deploying lowdown interactives.
+cli for developing and deploying lowdown interactives.
 
 
 ## Setup
