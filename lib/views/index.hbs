@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Interactive #xxx</title>
+    <style>
+      body {
+        background: #f6f6f6;
+      }
+    </style>
+    <script src="/iframe-resizer/iframeResizer.min.js"></script>
+  </head>
+  <body>
+    <button>In content</button>
+    <button>As content</button>
+    <iframe id="interactive-1" src="/interactive-frame" frameborder="0"></iframe>
+    <script type="text/javascript">
+      var iframes = iFrameResize({
+        inPageLinks: true,
+      }, document.getElementById('interactive-1'));
+    </script>
+  </body>
+</html>
