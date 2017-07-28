@@ -27,10 +27,7 @@ program
 program
   .command('publish')
   .action(function dist() {
-    bundling.dist()
-      .then(() => {
-        publish();
-      });
+    publish();
   })
 
 
