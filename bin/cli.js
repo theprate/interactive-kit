@@ -2,6 +2,7 @@
 
 const program = require('commander');
 const bundling = require('../lib/bundling');
+const publish = require('../lib/publish');
 
 /* setup global stuff */
 program
@@ -18,6 +19,7 @@ program
 program
   .command('dist')
   .action(function dist() {
+    // clear the dist directory
     bundling.dist();
   })
 
@@ -26,7 +28,9 @@ program
   .command('publish')
   .action(function dist() {
     bundling.dist()
-//      .then(publish(());
+      .then(() => {
+        publish();
+      });
   })
 
 
