@@ -27,7 +27,7 @@ program
 /* Command: publish version to lowdown */
 program
   .command('publish')
-  .action(function perfomrPublish() {
+  .action(function performPublish() {
     publish(config.getConfig());
   })
 
