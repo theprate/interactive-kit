@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+const path = require('path');
+const chalk = require('chalk');
 const program = require('commander');
 const bundling = require('../lib/bundling');
 const config = require('../lib/config');
@@ -13,6 +15,9 @@ program
 program
   .command('dev')
   .action(function dev() {
+    const slug = require(path.resolve(process.cwd(), './package.json')).name.slice(12);
+    console.log(`${chalk.bold('Developing:')} ${chalk.white(slug)}`)
+  
     bundling.development(config.getConfig());
   })
 
